@@ -1,9 +1,9 @@
 ## Problem 1 - Euclidean algorithm
 用Euclidean algorithm來求最大公因數
 
-##C++
+## C++
 我用兩種方法實作輾轉相除法
-##Risc V
+## Risc V
 實作第一種的輾轉相除法
 
 - pseudo code
