@@ -53,7 +53,7 @@ int main() {
 	m_ = new int* [N];
 	for (int i = 0; i < N; i++)
 		m_[i] = new int[M];
-*/
+	*/
 	for (int i = 0; i < N; i++)
 		for (int j = 0; j < N; j++)
 			//map[i][j] = m_[i][j] = 0;

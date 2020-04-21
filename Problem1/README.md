@@ -2,9 +2,12 @@
 用Euclidean algorithm來求最大公因數
 
 ### C++
-我用兩種方法實作輾轉相除法
+用兩種方法實作輾轉相除法
+法一:過去習慣的做法
+法二:老師提供的pseudo code(下方)作法
 ### Risc V
-實作第一種的輾轉相除法
+實作第一種的輾轉相除法。
+其中透過REM取餘數
 
 - pseudo code
 ```python=
