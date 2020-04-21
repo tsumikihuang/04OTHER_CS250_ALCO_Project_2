@@ -13,14 +13,15 @@ S⊆V		x、y∈S
 void Max(int v);
 void AddEdge(int x, int y);
 
-int matrix[100][100];	//adjacency matrix
+int RoadMatrix[100][100];
 
 int main() {
 
 	//N、M，分別代表圖的 點 和 邊 的數量
 	int N, M;				//v--vertex	//e--edge
 	cin >> N >> M;
-	int a[M], b[M];
+	int* a = new int[M];
+	int* b = new int[M];
 	for (int i = 0; i < M; i++) {
 		cin >> a[i] >> b[i];
 		AddEdge(a[i], b[i]);
@@ -33,21 +34,24 @@ int main() {
 
 void Max(int N) {
 	int MaxNum = 0;
-	int count[N] = { 0 };
+	int* count = new int[N];
 
-	for (int i = 0; i < N; i++) 
+	for (int i = 0; i < N; i++)
+		count[i] = 0;
+
+	for (int i = 0; i < N; i++)
 		for (int j = 0; j < N; j++)
-			if (matrix[i][j] == 1) 
+			if (RoadMatrix[i][j] == 1)
 				count[i]++;
-	
-	for (int i = 0; i < N; i++) 
-		if (count[i] > MaxNum) 
+
+	for (int i = 0; i < N; i++)
+		if (count[i] > MaxNum)
 			MaxNum = count[i];
-	
+
 	cout << MaxNum << endl;
 }
 
 void AddEdge(int x, int y) {
-	matrix[x][y] = 1;
-	matrix[y][x] = 1;
+	RoadMatrix[x][y] = 1;
+	RoadMatrix[y][x] = 1;
 }
